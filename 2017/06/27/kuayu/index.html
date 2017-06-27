@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/27/kuayu/index.html">
 <meta property="og:site_name" content="Sydney&#39;s Blog">
 <meta property="og:description" content="什么是跨域?跨域，指的是浏览器不能执行其他不同源网站的脚本。它是由浏览器的同源策略造成的，是浏览器对JavaScript施加的安全限制。所谓同源是指，域名（包括主域名和子域名），协议，端口均相同。限制如下：  Cookie、LocalStorage 和 IndexDB 无法读取。 DOM 无法获得。 AJAX 请求不能发送  需要注意的几个小点：  &amp;lt;img&amp;gt;、&amp;lt;iframe&amp;g">
-<meta property="og:updated_time" content="2017-06-27T09:46:27.000Z">
+<meta property="og:updated_time" content="2017-06-27T10:11:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域技术总结">
 <meta name="twitter:description" content="什么是跨域?跨域，指的是浏览器不能执行其他不同源网站的脚本。它是由浏览器的同源策略造成的，是浏览器对JavaScript施加的安全限制。所谓同源是指，域名（包括主域名和子域名），协议，端口均相同。限制如下：  Cookie、LocalStorage 和 IndexDB 无法读取。 DOM 无法获得。 AJAX 请求不能发送  需要注意的几个小点：  &amp;lt;img&amp;gt;、&amp;lt;iframe&amp;g">
@@ -400,7 +400,7 @@
 <h3 id="举例2"><a href="#举例2" class="headerlink" title="举例2"></a>举例2</h3><p>Cookie 是服务器写入浏览器的一小段信息，只有同源的网页才能共享。但是，两个网页一级域名相同，只是二级域名不同，浏览器允许通过设置<code>document.domain</code>共享 Cookie。</p>
 <p>举例来说，A网页是<code>http://w1.example.com/a.html</code>，B网页是<code>http://w2.example.com/b.html</code>，那么只要设置相同的<code>document.domain</code>，两个网页就可以共享Cookie。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.domain = &apos;example.com&apos;;</div></pre></td></tr></table></figure>
-<h1 id="window-name"><a href="#window-name" class="headerlink" title="window.name"></a><code>window.name</code></h1><p>window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的，并不会因新页面的载入而进行重置。</p>
+<h1 id="window-name"><a href="#window-name" class="headerlink" title="window.name"></a>window.name</h1><p>window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的，并不会因新页面的载入而进行重置。</p>
 <p>注意，window.name的值只能是字符串的形式，这个字符串的大小最大能允许2M左右甚至更大的一个容量。</p>
 <h3 id="举例-隐藏的iframe-window-name跨域"><a href="#举例-隐藏的iframe-window-name跨域" class="headerlink" title="举例 隐藏的iframe+window.name跨域"></a>举例 隐藏的iframe+window.name跨域</h3><p>比如有一个<code>www.example.com/a.html</code>页面,需要通过a.html页面里的js来获取另一个位于不同域上的页面<code>www.cnblogs.com/data.html</code>里的数据。</p>
 <p>那么我们可以在data.html中给当前的window.name设置一个a.html页面想要得到的数据值。</p>
@@ -562,10 +562,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
